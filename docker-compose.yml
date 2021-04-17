@@ -1,0 +1,13 @@
+version: '3'
+services:
+    postgres:
+            container_name: postgres_container
+            image: postgres:10-alpine
+            environment:
+               POSTGRES_PASSWORD: anthem
+               POSTGRES_USER: anthem
+               POSTGRES_DB: anthemdb
+#            volumes:
+#               - ./data/postgresql:/var/lib/postgresql/data
+            ports:
+              - 5432:5432            
